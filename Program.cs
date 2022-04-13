@@ -7,6 +7,8 @@ namespace FinanceApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Caller i=new Caller();
+
         }
     }
 }

@@ -6,12 +6,24 @@ namespace FinanceApp
     {
         static void Main(string[] args)
         {
-            EcomApp app = new EcomApp();
-            SCustomer customer1 = new SCustomer();
-            customer1.customerName = "ABC";
-            customer1.customerEmail = "abc@gmail.com";
-            customer1.customerPhone = "+9173737333";
-            app.AddCustomer(customer1);
+            ExceptionHandlingDemo obj=new ExceptionHandlingDemo();
+            try
+            {
+                obj.Login("", "secretsanta123");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("oops..unable to login now");
+            }
+            
+
+
+            //EcomApp app = new EcomApp();
+            //SCustomer customer1 = new SCustomer();
+            //customer1.customerName = "ABC";
+            //customer1.customerEmail = "abc@gmail.com";
+            //customer1.customerPhone = "+9173737333";
+            //app.AddCustomer(customer1);
 
             //Caller i=new Caller();
             //ArrayListDemo o=new ArrayListDemo();

@@ -8,13 +8,15 @@ namespace FinanceApp
 {
     internal class ArrayListDemo
     {
-        ArrayList cities = new ArrayList();
-
+        List<string> cities = new List<string>();
+        List<int> scores = new List<int>();
         internal void SetCity(string cityName) { 
             cities.Add(cityName);
-            cities.Add(500);
-            cities.Add(true);
+            cities.Add("delhi");
+            cities.Add("mumbai");
             cities.Add(null);
+            scores.Add(100);
+
         }
 
        internal  void getCity() {

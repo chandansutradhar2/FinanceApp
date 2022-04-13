@@ -6,9 +6,12 @@ namespace FinanceApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Caller i=new Caller();
-
+            
+            //Caller i=new Caller();
+            ArrayListDemo o=new ArrayListDemo();
+            o.SetCity("Mumbai");
+          
+            o.getCity();
         }
     }
 }

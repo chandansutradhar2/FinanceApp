@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using System.Collections;
 namespace FinanceApp
 {
     internal class FinanceApp
@@ -26,7 +27,7 @@ namespace FinanceApp
         }
         public void AddExpense(int expAmount)
         {
-            user.expenses[0] = expAmount;
+            user.expenses.Add(expAmount);
         }
     }
     class Expense
@@ -47,7 +48,9 @@ namespace FinanceApp
         public string emailAddress { get; set; }
         public string phoneNumber;
 
-        public int[] expenses = new int[40];
+      //  public int[] expenses = new int[40]; //8 byte 8*40=320 byte
+      
+       public ArrayList expenses = new ArrayList();
 
         public User(int _userId, string _password, string _fName, string _lName, string _email, string _mobile)
         {
@@ -68,15 +71,17 @@ namespace FinanceApp
         {
             FinanceApp app = new FinanceApp(new User(01, "secret3", "Chandan", "Naresh", "chandan@gmail.com", "8080808333"));
             FinanceApp app2 = new FinanceApp(new User(01, "secret3", "Ranjan", "Sutradhar", "ranjan@gmail.com", "8966565543"));
-
-            app.AddExpense(20);
+            app.AddExpense(40000);
+            app2.AddExpense(500);
+            app.AddExpense(1500);
+            app.AddExpense(1250);
             //string userString = JsonSerializer.Serialize(app.GetCurrentUser());
 
             Console.WriteLine($"FirstName: {app.GetCurrentUser().firstName}, LastName: {app.GetCurrentUser().lastName} , PhoneNumber:{app.GetCurrentUser().phoneNumber}");
-            Array.ForEach(app.GetCurrentUser().expenses, exp =>
-            {
-                Console.WriteLine(exp);
-            });
+            //Array.ForEach(app.GetCurrentUser().expenses., exp =>
+            //{
+            //    Console.WriteLine(exp);
+            //});
             //Console.WriteLine(userString);
 
         }

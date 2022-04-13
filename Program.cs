@@ -6,15 +6,20 @@ namespace FinanceApp
     {
         static void Main(string[] args)
         {
-            ExceptionHandlingDemo obj=new ExceptionHandlingDemo();
-            try
-            {
-                obj.Login("", "secretsanta123");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("oops..unable to login now");
-            }
+
+            FileHandlingDemo demo = new FileHandlingDemo();
+            demo.GetFileInfo("c:/chandan/e-learning/florence/MyFirstApp.java");
+           // demo.CreateLog("FinanceApp2.log", "c:/chandan/e-learning/florence");
+            demo.Log("c:/chandan/e-learning/florence/FinanceApp.log", "Another Line", "SUCCESS");
+            //ExceptionHandlingDemo obj=new ExceptionHandlingDemo();
+            //try
+            //{
+            //    obj.Login("", "secretsanta123");
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("oops..unable to login now");
+            //}
             
 
 
